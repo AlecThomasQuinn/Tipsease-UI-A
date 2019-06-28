@@ -1,0 +1,397 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 62.5%;
+  /* This is about 10px and from here Rems can be calculated easily: 2.4rem = 24px AND it scales to the browser, making it responsive */
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+/* Set all text to Roboto w/CSS import on HTML Page */
+html,
+body {
+  height: 100%;
+  font-family: 'Nunito', sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  color: #339EF9;
+}
+button {
+  font-family: 'Roboto', sans-serif;
+}
+/* Color Assignments */
+/* It seems like these should be assigned last, once I see how every color
+ is related to each object*/
+/* Colors, taken from UX Design File*/
+/* Escapes */
+nav {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1000px;
+  box-shadow: 0 0.1rem 0.1rem #f7f7f7;
+  background: white;
+}
+nav a {
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #339EF9;
+  padding: 1.2rem;
+}
+.nav-wrapper {
+  padding-bottom: 2.4rem;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+footer .nav-wrapper {
+  display: none;
+}
+@media (min-width: 1000px) {
+  .banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+  .nav-wrapper {
+    padding-bottom: 5rem;
+    width: 1024px;
+    margin: auto;
+    z-index: 1;
+    position: static;
+    background-color: transparent;
+  }
+  nav {
+    max-width: 1024px;
+    background-color: transparent;
+    box-shadow: none;
+  }
+  nav :nth-child(1) {
+    color: white;
+  }
+  nav :nth-child(2) {
+    color: white;
+  }
+  nav a {
+    font-size: 2rem;
+    padding: 2rem;
+  }
+  footer .nav-wrapper {
+    display: inline;
+    padding: 5rem 0 0 0;
+  }
+  footer nav :nth-child(1) {
+    color: #339EF9;
+  }
+  footer nav :nth-child(2) {
+    color: #339EF9;
+  }
+}
+article {
+  margin-left: 12.5%;
+  margin-bottom: 2.8rem;
+}
+article p {
+  color: #4E4E4E;
+  font-size: 1.3rem;
+}
+article h1 {
+  font-size: 2.8rem;
+  font-weight: 600;
+}
+article h2 {
+  font-size: 1.8rem;
+  font-weight: 00;
+}
+article h1,
+article h2,
+article h3,
+article h4,
+article h5 {
+  font-weight: 550;
+  color: #339EF9;
+  margin-bottom: 0.1rem;
+}
+.intro {
+  margin-bottom: 1.1rem;
+}
+.intro p {
+  font-size: 1.5rem;
+  width: 83%;
+}
+.features-column h1 {
+  display: none;
+}
+.feature {
+  width: 75%;
+}
+.feature p {
+  padding-bottom: 1.1rem;
+}
+.feature h2 {
+  padding-bottom: 1rem;
+}
+@media (min-width: 1000px) {
+  section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1024px;
+    margin: auto;
+  }
+  .intro p {
+    font-size: 2.5rem;
+    color: white;
+  }
+  .intro h1 {
+    font-size: 5.5rem;
+    font-weight: bold;
+    color: white;
+  }
+  .features-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #f7f7f7;
+  }
+  .features-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .features-column h1 {
+    font-size: 3rem;
+  }
+  .feature {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0 1rem;
+    margin-left: 1rem;
+  }
+  .feature h2 {
+    padding: 1rem 0;
+  }
+  .feature p {
+    padding: 1rem 0;
+  }
+}
+#paySvgWrapper {
+  max-width: 100%;
+  overflow: hidden;
+  text-indent: -10%;
+}
+#paySvg {
+  max-width: 115%;
+}
+#blueSvg {
+  display: none;
+}
+#iphoneSvgWrapper {
+  display: none;
+}
+@media (min-width: 600px) {
+  #paySvgWrapper {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media (min-width: 1000px) {
+  #blueSvgWrapper {
+    position: absolute;
+    z-index: -1;
+    top: 0rem;
+  }
+  #blueSvg {
+    display: inline;
+  }
+  #paySvgWrapper {
+    justify-content: end;
+    height: 450px;
+  }
+  #paySvg {
+    position: absolute;
+    top: 7rem;
+    z-index: -2;
+  }
+  #iphoneSvgWrapper {
+    display: flex;
+    margin-left: 12.5%;
+  }
+}
+.cta-wrapper {
+  display: flex;
+  justify-content: center;
+}
+button {
+  font-size: 2rem;
+  font-weight: semi-bold;
+  text-align: center;
+  border-radius: 50%;
+  width: 146px;
+  height: 146px;
+  padding: 1.3rem 0;
+  border: 1px solid transparent;
+  padding-bottom: 0.5rem;
+  align-self: center;
+  justify-self: center;
+  position: relative;
+}
+@media (min-width: 1000px) {
+  button {
+    width: 180px;
+    height: 180px;
+    margin: 5rem 0;
+  }
+}
+.top {
+  bottom: 2rem;
+}
+.white {
+  background: white;
+  color: #339EF9;
+  box-shadow: 0 0.4rem 0.4rem #f7f7f7;
+}
+.bottom {
+  position: static;
+  margin-bottom: 3rem;
+}
+.blue {
+  background: linear-gradient(136deg, #6BD6FA, #3A7AE7);
+  color: white;
+  box-shadow: 0 0.1rem 0.1rem #73BAF8;
+}

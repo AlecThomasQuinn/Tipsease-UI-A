@@ -1,0 +1,60 @@
+#paySvgWrapper{
+    max-width: 100%;
+    overflow: hidden;
+    text-indent: -10%;
+}
+
+// .banner-img{
+//     max-width: 115%;
+// }
+
+#paySvg{
+    max-width: 115%;
+}
+
+#blueSvg{
+    display: none;
+}
+
+#iphoneSvgWrapper{
+    display:none;
+}
+
+@media(min-width: 600px) {
+    
+    #paySvgWrapper{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media @desktop{
+
+    #blueSvgWrapper{
+        position: absolute;
+        z-index: -1;
+        top: 0rem;
+    }
+
+    #blueSvg{
+        display: inline;
+    }
+    
+    #paySvgWrapper{
+        justify-content: end;
+        height: 450px;
+    }
+
+    #paySvg{
+        position: absolute;
+        top: 7rem;
+        z-index: -2;
+    }
+
+    #iphoneSvgWrapper{
+        display: flex;
+        //width: 50%;
+        margin-left: 12.5%;
+    }
+
+}
